@@ -1,8 +1,14 @@
+import sys
+
 from olsodb.db import api
+from oslo_config import cfg
 
 
 def main():
-    api.configure({'connection': 'sqlite:////tmp/baza.sqlite'})
+    cfg.CONF(sys.argv[1:],
+            project='olsodb')
+    api.configure({})
+    api.create_schema()
     ctx = api.get_context()
 
     api.create_foo(ctx, 'jakies gowno')
