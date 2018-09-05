@@ -4,6 +4,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Integer
 from sqlalchemy import String
 
+
 class _Base(models.ModelBase, models.TimestampMixin):
     pass
 

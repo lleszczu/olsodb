@@ -7,6 +7,7 @@ _BACKEND_MAPPING = {'sqlalchemy': 'olsodb.db.sqlalchemy.api'}
 
 IMPL = db_api.DBAPI.from_config(cfg.CONF, backend_mapping=_BACKEND_MAPPING)
 
+
 def configure(conf):
     IMPL.configure(conf)
 
